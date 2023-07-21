@@ -76,3 +76,6 @@ ui/next-env.d.ts
 
 .env
 logs
+
+
+env_python
