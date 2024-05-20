@@ -1,9 +1,10 @@
 import random
-from pprint import pprint
 from time import sleep
+from pprint import pprint
+from datetime import datetime
 
-PEAGE_TAG = ["entrant", "sortant"]
 PEAGE_PAY = ["RAPIDO", "Espece"]
+PEAGE_TAG = ["entrant", "sortant"]
 PEAGE_CHECKPOINT = ["pikine", "poste thiaroye", "cap biche"]
 PEAGE_CATEG = [
         {"categ": "C1", "label": "Moto", "price": 400},
@@ -13,7 +14,6 @@ PEAGE_CATEG = [
         {"categ": "C5", "label": "Poids lourd", "price": 1000},
 ]
 
-# categ - label - price - tag - checkpoint - datetime - date - time - datetime_categ_label_price_tag
 
 while True:
         peage_categ = random.choice(PEAGE_CATEG)
@@ -21,10 +21,17 @@ while True:
         peage_pay = random.choice(PEAGE_PAY)
         peage_checkpoint = random.choice(PEAGE_CHECKPOINT)
         
-        #id = f"{peage_categ["categ"]} _ {peage_categ["label"]}_{peage_categ["price"]}_{peage_tag}"
+        current_datetime = datetime.now()
+        day = current_datetime.strftime("%d/%m/%Y")
+        time = current_datetime.strftime("%H:%M:%S")
+        
+        ID = f"{current_datetime}-{peage_categ['categ']}-{peage_categ['label']}-{str(peage_categ['price'])}-{peage_tag}"
         
         pprint({
-                "id" : None,
+                "id" : ID,
+                "datetime": str(current_datetime),
+                "date" : day,
+                "time" : time,
                 "category" : peage_categ["categ"],
                 "label" : peage_categ["label"],
                 "price" : peage_categ["price"],
