@@ -1,6 +1,7 @@
 import random
-from pprint import pprint
 from time import sleep
+from pprint import pprint
+from datetime import datetime
 
 
 TER_PAY = ["Espece", "Carte voyage", "Carte abonnement"]
@@ -17,12 +18,16 @@ TER_CHECKPOINT = [ "Dakar", "Colobane", "Hann", "Beaux Maraîchers",
 
 
 while True:
+        
+        current_datetime = datetime.now()
+        day = current_datetime.strftime("%d/%m/%Y")
+        time = current_datetime.strftime("%H:%M:%S")
         ter_pay = random.choice(TER_PAY)
         ter_zone = random.choice(TER_ZONE)
         ter_checkpoint = random.choice(TER_CHECKPOINT)
         
-        resultat = f"{ter_pay}-{ter_checkpoint}-{ter_zone['zone']}"
-        print(resultat)
+        ID = f"{current_datetime}-{ter_zone['zone']}-{str(ter_zone['price'])}-{ter_pay}-{ter_checkpoint}"
+        print(ID)
         # pprint({
         #       "id" : None,
         #       "zone" : ter_zone["zone"],  
