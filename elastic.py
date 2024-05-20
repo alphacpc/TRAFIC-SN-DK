@@ -8,11 +8,11 @@ from elasticsearch import Elasticsearch
 
 # Configuration de Kafka
 kafka_producer_config = {
-    'bootstrap.servers': 'localhost:9092'  # Remplacez par l'adresse de votre serveur Kafka
+    'bootstrap.servers': 'localhost:9092'
 }
 
 kafka_consumer_config = {
-    'bootstrap.servers': 'localhost:9092',  # Remplacez par l'adresse de votre serveur Kafka
+    'bootstrap.servers': 'localhost:9092',
     'group.id': 'my_group',
     'auto.offset.reset': 'earliest'
 }
@@ -20,20 +20,22 @@ kafka_consumer_config = {
 # Configuration d'Elasticsearch
 es = Elasticsearch([{'host': 'localhost', 'port': 9200}])
 
+
 def send_to_kafka():
     producer = Producer(kafka_producer_config)
-    topic = 'your_topic'  # Remplacez par votre topic Kafka
+    topic = 'your_topic'
 
-    for i in range(10):  # Exemple de 10 messages
+    for i in range(10):
         data = json.dumps({"message": f"Hello, Kafka from Airflow! {i}"})
         producer.produce(topic, value=data)
         producer.flush()
         print(f"Message sent to Kafka: {data}")
-        time.sleep(1)  # Pause de 1 seconde entre les envois pour éviter un flux trop rapide
+        time.sleep(1)
+
 
 def read_from_kafka_and_write_to_es():
     consumer = Consumer(kafka_consumer_config)
-    topic = 'your_topic'  # Remplacez par votre topic Kafka
+    topic = 'your_topic'
     consumer.subscribe([topic])
 
     while True:
@@ -52,6 +54,7 @@ def read_from_kafka_and_write_to_es():
 
     consumer.close()
 
+
 # Définir les arguments par défaut du DAG
 default_args = {
     'owner': 'airflow',
@@ -63,6 +66,7 @@ default_args = {
     'retry_delay': timedelta(minutes=5),
 }
 
+
 # Créer le DAG
 dag = DAG(
     'kafka_to_es_dag',
@@ -71,6 +75,7 @@ dag = DAG(
     schedule_interval=timedelta(days=1),
 )
 
+
 # Définir les tâches
 send_to_kafka_task = PythonOperator(
     task_id='send_to_kafka_task',
@@ -78,10 +83,12 @@ send_to_kafka_task = PythonOperator(
     dag=dag,
 )
 
+
 read_from_kafka_and_write_to_es_task = PythonOperator(
     task_id='read_from_kafka_and_write_to_es_task',
     python_callable=read_from_kafka_and_write_to_es,
     dag=dag,
 )
+
 
 send_to_kafka_task >> read_from_kafka_and_write_to_es_task
