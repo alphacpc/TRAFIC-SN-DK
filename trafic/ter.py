@@ -15,17 +15,20 @@ TER_CHECKPOINT = [ "Dakar", "Colobane", "Hann", "Beaux Maraîchers",
 "Keur Mbaye Fall", "Rufisque", "Bargny", "Diamniadio"]
 
 
+
 while True:
         ter_pay = random.choice(TER_PAY)
         ter_zone = random.choice(TER_ZONE)
         ter_checkpoint = random.choice(TER_CHECKPOINT)
         
-        pprint({
-              "id" : None,
-              "zone" : ter_zone["zone"],  
-              "price" : ter_zone["price"],  
-              "checkpoint" : ter_checkpoint,  
-              "pay" : ter_pay,  
-        })
+        resultat = f"{ter_pay}-{ter_checkpoint}-{ter_zone['zone']}"
+        print(resultat)
+        # pprint({
+        #       "id" : None,
+        #       "zone" : ter_zone["zone"],  
+        #       "price" : ter_zone["price"],  
+        #       "checkpoint" : ter_checkpoint,  
+        #       "pay" : ter_pay,  
+        # })
         
-        sleep(0.5)
+        sleep(1)
