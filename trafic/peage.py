@@ -16,20 +16,19 @@ PEAGE_CATEG = [
 
 
 while True:
+        
+        current_datetime = datetime.now()
+        
         peage_categ = random.choice(PEAGE_CATEG)
         peage_tag = random.choice(PEAGE_TAG)
         peage_pay = random.choice(PEAGE_PAY)
         peage_checkpoint = random.choice(PEAGE_CHECKPOINT)
         
-        current_datetime = datetime.now()
-        day = current_datetime.strftime("%d/%m/%Y")
-        time = current_datetime.strftime("%H:%M:%S")
-        
         pprint({
                 "id" : f"{current_datetime}-{peage_categ['categ']}-{peage_categ['label']}-{str(peage_categ['price'])}-{peage_tag}",
                 "datetime": str(current_datetime),
-                "date" : day,
-                "time" : time,
+                "date" : current_datetime.strftime("%d/%m/%Y"),
+                "time" : current_datetime.strftime("%H:%M:%S"),
                 "category" : peage_categ["categ"],
                 "label" : peage_categ["label"],
                 "price" : peage_categ["price"],
