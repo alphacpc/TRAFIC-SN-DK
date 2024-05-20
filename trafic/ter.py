@@ -26,11 +26,9 @@ while True:
         ter_pay = random.choice(TER_PAY)
         ter_zone = random.choice(TER_ZONE)
         ter_checkpoint = random.choice(TER_CHECKPOINT)
-        
-        ID = f"{current_datetime}-{ter_zone['zone']}-{str(ter_zone['price'])}-{ter_pay}-{ter_checkpoint}"
-        
+                
         pprint({
-              "id" : ID,
+              "id" : f"{current_datetime}-{ter_zone['zone']}-{str(ter_zone['price'])}-{ter_pay}-{ter_checkpoint}",
               "datetime": str(current_datetime),
               "date": day,
               "time": time,

@@ -25,10 +25,8 @@ while True:
         day = current_datetime.strftime("%d/%m/%Y")
         time = current_datetime.strftime("%H:%M:%S")
         
-        ID = f"{current_datetime}-{peage_categ['categ']}-{peage_categ['label']}-{str(peage_categ['price'])}-{peage_tag}"
-        
         pprint({
-                "id" : ID,
+                "id" : f"{current_datetime}-{peage_categ['categ']}-{peage_categ['label']}-{str(peage_categ['price'])}-{peage_tag}",
                 "datetime": str(current_datetime),
                 "date" : day,
                 "time" : time,
