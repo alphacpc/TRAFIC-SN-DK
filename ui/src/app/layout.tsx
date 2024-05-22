@@ -4,7 +4,10 @@ import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata: Metadata = { title: 'TRAFIC SENEGAL', description: 'Simulation du trafic du senegal en Next.js & Spring Boot',}
+export const metadata: Metadata = { 
+  title: 'TRAFIC SENEGAL', 
+  description: 'Simulation du trafic du senegal en Next.js & Spring Boot'
+}
 
 export default function RootLayout({
   children,
