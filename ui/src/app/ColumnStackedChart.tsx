@@ -3,63 +3,81 @@ import dynamic from "next/dynamic";
 import { ApexOptions } from "apexcharts";
 import React, { useState, useEffect } from 'react';
 
-const COLUMN_BASIC = {
+
+const COLUMN_STACKED = {
   series: [{
-    name: 'Net Profit',
-    data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
+    name: 'PRODUCT A',
+    data: [44, 55, 41, 67, 22, 43]
   }, {
-    name: 'Revenue',
-    data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
+    name: 'PRODUCT B',
+    data: [13, 23, 20, 8, 13, 27]
   }, {
-    name: 'Free Cash Flow',
-    data: [35, 41, 36, 26, 45, 48, 52, 53, 41]
+    name: 'PRODUCT C',
+    data: [11, 17, 15, 15, 21, 14]
+  }, {
+    name: 'PRODUCT D',
+    data: [21, 7, 25, 13, 22, 8]
   }],
   options: {
     chart: {
       type: 'bar',
-      height: 350
+      height: 350,
+      stacked: true,
+      toolbar: {
+        show: true
+      },
+      zoom: {
+        enabled: true
+      }
     },
+    responsive: [{
+      breakpoint: 480,
+      options: {
+        legend: {
+          position: 'bottom',
+          offsetX: -10,
+          offsetY: 0
+        }
+      }
+    }],
     plotOptions: {
       bar: {
         horizontal: false,
-        columnWidth: '55%',
-        endingShape: 'rounded'
+        borderRadius: 10,
+        borderRadiusApplication: 'end', // 'around', 'end'
+        borderRadiusWhenStacked: 'last', // 'all', 'last'
+        dataLabels: {
+          total: {
+            enabled: true,
+            style: {
+              fontSize: '13px',
+              fontWeight: 900
+            }
+          }
+        }
       },
     },
-    dataLabels: {
-      enabled: false
-    },
-    stroke: {
-      show: true,
-      width: 2,
-      colors: ['transparent']
-    },
     xaxis: {
-      categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+      type: 'datetime',
+      categories: ['01/01/2011 GMT', '01/02/2011 GMT', '01/03/2011 GMT', '01/04/2011 GMT',
+        '01/05/2011 GMT', '01/06/2011 GMT'
+      ],
     },
-    yaxis: {
-      title: {
-        text: '$ (thousands)'
-      }
+    legend: {
+      position: 'right',
+      offsetY: 40
     },
     fill: {
       opacity: 1
-    },
-    tooltip: {
-      y: {
-        formatter: function (val) {
-          return "$ " + val + " thousands"
-        }
-      }
     }
   } as ApexOptions,
-}
 
+}
 
 
 const ApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
-const ColumnBasicChart: React.FC = () => {
+const ColumnStrackedChart: React.FC = () => {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -71,12 +89,12 @@ const ColumnBasicChart: React.FC = () => {
   return (
     <div id="chart">
       <ApexChart
-        options={COLUMN_BASIC.options}
-        series={COLUMN_BASIC.series}
+        options={COLUMN_STACKED.options}
+        series={COLUMN_STACKED.series}
         width={600}
       />
     </div>
   );
 }
 
-export default ColumnBasicChart;
+export default ColumnStrackedChart;
