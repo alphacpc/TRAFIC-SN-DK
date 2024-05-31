@@ -5,6 +5,7 @@ import { HiOutlineArrowLongDown, HiOutlineArrowLongUp } from "react-icons/hi2";
 import Chart from 'react-apexcharts';
 import { ApexOptions } from 'apexcharts';
 import dynamic from 'next/dynamic';
+import LineDashedChart from './LineDashedChart';
 
 
 const LineChart = dynamic(() => import('./LineChart'), { ssr: false });
@@ -86,6 +87,7 @@ export default function Home() {
 
 
       <LineChart />
+      <LineDashedChart/>
 
     </main>
   )

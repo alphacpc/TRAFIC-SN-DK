@@ -3,92 +3,92 @@ import dynamic from "next/dynamic";
 import { ApexOptions } from "apexcharts";
 import React, { useState, useEffect } from 'react';
 
-const LINE_WITH_LABELS = {
-  series: [
-    {
-      name: "High - 2013",
-      data: [28, 29, 33, 36, 32, 32, 33]
+const LINE_DASHED = {
+  series: [{
+    name: "Session Duration",
+    data: [45, 52, 38, 24, 33, 26, 21, 20, 6, 8, 15, 10]
+  },
+  {
+    name: "Page Views",
+    data: [35, 41, 62, 42, 13, 18, 29, 37, 36, 51, 32, 35]
+  },
+  {
+    name: 'Total Visits',
+    data: [87, 57, 74, 99, 75, 38, 62, 47, 82, 56, 45, 47]
+  }
+],
+options: {
+  chart: {
+    height: 350,
+    type: 'line',
+    zoom: {
+      enabled: false
     },
-    {
-      name: "Low - 2013",
-      data: [12, 11, 14, 18, 17, 13, 13]
+  },
+  dataLabels: {
+    enabled: false
+  },
+  stroke: {
+    width: [5, 7, 5],
+    curve: 'straight',
+    dashArray: [0, 8, 5]
+  },
+  title: {
+    text: 'Page Statistics',
+    align: 'left'
+  },
+  legend: {
+    tooltipHoverFormatter: function(val:any, opts:any) {
+      return val + ' - <strong>' + opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] + '</strong>'
     }
-  ],
-  options: {
-    chart: {
-      height: 350,
-      type: 'line',
-      dropShadow: {
-        enabled: true,
-        color: '#000',
-        top: 18,
-        left: 7,
-        blur: 10,
-        opacity: 0.2
-      },
-      zoom: {
-        enabled: false
-      },
-      toolbar: {
-        show: false
-      }
-    },
-    colors: ['#77B6EA', '#545454'],
-    dataLabels: {
-      enabled: true,
-    },
-    stroke: {
-      curve: 'smooth'
-    },
-    title: {
-      text: 'Average High & Low Temperature',
-      align: 'left'
-    },
-    grid: {
-      borderColor: '#e7e7e7',
-      row: {
-        colors: ['#f3f3f3', 'transparent'],
-        opacity: 0.5
-      },
-    },
-    markers: {
-      size: 1
-    },
-    xaxis: {
-      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
-      title: {
-        text: 'Month'
-      }
-    },
-    yaxis: {
-      title: {
-        text: 'Temperature'
-      },
-      min: 5,
-      max: 40
-    },
-    legend: {
-      position: 'top',
-      horizontalAlign: 'right',
-      floating: true,
-      offsetY: -25,
-      offsetX: -5
+  },
+  markers: {
+    size: 0,
+    hover: {
+      sizeOffset: 6
     }
-  } as ApexOptions,
-};
-
-interface TopicGraphProps {
-  series: {
-    name: string;
-    data: number[];
-  }[];
-  categories: string[];
+  },
+  xaxis: {
+    categories: ['01 Jan', '02 Jan', '03 Jan', '04 Jan', '05 Jan', '06 Jan', '07 Jan', '08 Jan', '09 Jan',
+      '10 Jan', '11 Jan', '12 Jan'
+    ],
+  },
+  tooltip: {
+    y: [
+      {
+        title: {
+          formatter: function (val:any) {
+            return val + " (mins)"
+          }
+        }
+      },
+      {
+        title: {
+          formatter: function (val : any) {
+            return val + " per session"
+          }
+        }
+      },
+      {
+        title: {
+          formatter: function (val : any) {
+            return val;
+          }
+        }
+      }
+    ]
+  },
+  grid: {
+    borderColor: '#f1f1f1',
+  }
+} as ApexOptions,
 }
+
 
 
 const ApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
-const LineChart: React.FC = () => {
+const LineDashedChart: React.FC = () => {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -100,14 +100,12 @@ const LineChart: React.FC = () => {
   return (
     <div id="chart">
       <ApexChart
-        options={LINE_WITH_LABELS.options}
-        series={LINE_WITH_LABELS.series}
-        type="line"
-        // height={350}
+        options={LINE_DASHED.options}
+        series={LINE_DASHED.series}
         width={600}
       />
     </div>
   );
 }
 
-export default LineChart;
+export default LineDashedChart;
