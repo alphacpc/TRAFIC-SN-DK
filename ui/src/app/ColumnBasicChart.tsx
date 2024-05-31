@@ -74,6 +74,7 @@ const ColumnBasicChart: React.FC = () => {
         options={COLUMN_BASIC.options}
         series={COLUMN_BASIC.series}
         width={600}
+        type="bar"
       />
     </div>
   );

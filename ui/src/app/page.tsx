@@ -5,6 +5,7 @@ import { HiOutlineArrowLongDown, HiOutlineArrowLongUp } from "react-icons/hi2";
 import dynamic from 'next/dynamic';
 import LineDashedChart from './LineDashedChart';
 import ColumnBasicChart from './ColumnBasicChart';
+import ColumnStrackedChart from './ColumnStackedChart';
 
 
 const LineChart = dynamic(() => import('./LineChart'), { ssr: false });
@@ -88,6 +89,7 @@ export default function Home() {
       <LineChart />
       <LineDashedChart/>
       <ColumnBasicChart/>
+      <ColumnStrackedChart/>
 
     </main>
   )

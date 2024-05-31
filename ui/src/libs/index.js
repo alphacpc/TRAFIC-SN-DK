@@ -1,3 +1,6 @@
+import { ApexOptions } from "apexcharts";
+
+
 const LINE_WITH_LABELS = {
   series: [
     {

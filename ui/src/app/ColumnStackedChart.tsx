@@ -92,6 +92,7 @@ const ColumnStrackedChart: React.FC = () => {
         options={COLUMN_STACKED.options}
         series={COLUMN_STACKED.series}
         width={600}
+        type="bar"
       />
     </div>
   );
