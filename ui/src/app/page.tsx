@@ -2,10 +2,9 @@ import Image from 'next/image'
 import { IoTrainOutline, IoBusOutline } from "react-icons/io5";
 import { PiRoadHorizon } from "react-icons/pi";
 import { HiOutlineArrowLongDown, HiOutlineArrowLongUp } from "react-icons/hi2";
-import Chart from 'react-apexcharts';
-import { ApexOptions } from 'apexcharts';
 import dynamic from 'next/dynamic';
 import LineDashedChart from './LineDashedChart';
+import ColumnBasicChart from './ColumnBasicChart';
 
 
 const LineChart = dynamic(() => import('./LineChart'), { ssr: false });
@@ -88,6 +87,7 @@ export default function Home() {
 
       <LineChart />
       <LineDashedChart/>
+      <ColumnBasicChart/>
 
     </main>
   )
