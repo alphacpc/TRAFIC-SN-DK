@@ -12,14 +12,14 @@ import PanelStatCompoment from '@/components/PanelStatCompoment';
 
 export default function Home() {
   return (
-    <main className="fle min-h-screen flex-col items-center justify-between bg-lime-100">
+    <main className="flex flex-row min-h-screen bg-lime-100">
       
-      <aside className="">
+      <aside className="flex w-[25rem] bg-amber-600">
         SidebarComponent
       </aside>
 
-      <section>
-        <div className="flex bg-red-500">
+      <section className="p-2 bg-slate-200">
+        <div className="flex flex- bg-red-500">
           <PanelStatCompoment IconTitle={<IoTrainOutline size={75}/>} title="passagers"
             count_glo={23445} count_in={23} label_in="Aller"
             count_out={44} label_out="Retour" 
