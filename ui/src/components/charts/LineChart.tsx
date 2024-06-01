@@ -1,12 +1,12 @@
 "use client";
 import dynamic from "next/dynamic";
 import React, { useState, useEffect } from 'react';
-import {LINE_DASHED}  from "./../libs/index";
+import {LINE_WITH_LABELS}  from "../../libs/index";
 
 
 const ApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
-const LineDashedChart: React.FC = () => {
+const LineChart: React.FC = () => {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -18,12 +18,14 @@ const LineDashedChart: React.FC = () => {
   return (
     <div id="chart">
       <ApexChart
-        options={LINE_DASHED.options}
-        series={LINE_DASHED.series}
+        options={LINE_WITH_LABELS.options}
+        series={LINE_WITH_LABELS.series}
+        type="line"
+        // height={350}
         width={600}
       />
     </div>
   );
 }
 
-export default LineDashedChart;
+export default LineChart;

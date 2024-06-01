@@ -2,10 +2,10 @@ import Image from 'next/image'
 import { IoTrainOutline, IoBusOutline } from "react-icons/io5";
 import { PiRoadHorizon } from "react-icons/pi";
 import { HiOutlineArrowLongDown, HiOutlineArrowLongUp } from "react-icons/hi2";
-import LineDashedChart from './LineDashedChart';
-import ColumnBasicChart from './ColumnBasicChart';
-import ColumnStrackedChart from './ColumnStackedChart';
-import LineChart from './LineChart';
+import LineDashedChart from '../components/charts/LineDashedChart';
+import ColumnBasicChart from '../components/charts/ColumnBasicChart';
+import ColumnStrackedChart from '../components/charts/ColumnStackedChart';
+import LineChart from '../components/charts/LineChart';
 
 
 
