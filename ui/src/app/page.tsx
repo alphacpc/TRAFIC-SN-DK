@@ -11,9 +11,9 @@ import LineChart from './LineChart';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between bg-lime-100 p-10">
+    <main className="fle min-h-screen flex-col items-center justify-between bg-lime-100 p-10">
       
-      <div className="flex">
+      <div className="flex bg-red-500">
       <div className="div-panel-stat-trafic w-[14vw] border-2 border-bla rounded-md shadow-lg p-4 flex flex-col items-center justify-center">
         <IoTrainOutline size={75}/>
         
