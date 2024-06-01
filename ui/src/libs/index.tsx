@@ -72,7 +72,7 @@ const LINE_WITH_LABELS = {
       offsetY: -25,
       offsetX: -5
     }
-  },
+  } as ApexOptions,
 }
 
 
@@ -154,7 +154,7 @@ options: {
   grid: {
     borderColor: '#f1f1f1',
   }
-},
+} as ApexOptions,
 }
 
 
@@ -207,8 +207,9 @@ const COLUMN_BASIC = {
         }
       }
     }
-  },
+  } as ApexOptions,
 }
+
 
 const COLUMN_STACKED = {
   series: [{
@@ -276,6 +277,5 @@ const COLUMN_STACKED = {
     fill: {
       opacity: 1
     }
-  },
-
+  } as ApexOptions,
 }
