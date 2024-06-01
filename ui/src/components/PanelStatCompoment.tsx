@@ -19,13 +19,13 @@ const PanelStatCompoment : FC<PanelStatComponentProps> = (
                 IconTitle
         }) => {
                 return (
-                        <div className="div-panel-stat-trafic w-[14vw] border-2 border-bla rounded-md shadow-lg p-4 
-                                flex flex-col items-center justify-center">
+                        <div className="div-panel-stat-trafic w-[15vw] border-2 border-bla rounded-md shadow-lg p-4 
+                                flex flex-col items-center justify-center bg-white">
                                 
                                 {IconTitle}
                                 
                                 <p className="text-4xl mt-4">{count_glo}</p>
-                                <p>{title}</p>
+                                <p className="mb-4">{title}</p>
                                 
                                 <div className="flex items-center">
                                 
