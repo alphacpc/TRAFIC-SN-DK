@@ -1,8 +1,7 @@
 "use client";
 import dynamic from "next/dynamic";
-import { ApexOptions } from "apexcharts";
 import React, { useState, useEffect } from 'react';
-import {LINE_DASHED}  from "./../libs/index"
+import {LINE_DASHED}  from "./../libs/index";
 
 
 const ApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });

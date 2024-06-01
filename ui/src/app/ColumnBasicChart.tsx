@@ -1,6 +1,5 @@
 "use client";
 import dynamic from "next/dynamic";
-import { ApexOptions } from "apexcharts";
 import React, { useState, useEffect } from 'react';
 import {COLUMN_BASIC}  from "./../libs/index";
 
