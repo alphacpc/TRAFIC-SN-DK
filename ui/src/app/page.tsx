@@ -14,34 +14,42 @@ export default function Home() {
   return (
     <main className="fle min-h-screen flex-col items-center justify-between bg-lime-100">
       
-      <div className="flex bg-red-500">
-        <PanelStatCompoment IconTitle={<IoTrainOutline size={75}/>} title="passagers"
-          count_glo={23445} count_in={23} label_in="Aller"
-          count_out={44} label_out="Retour" 
-          IconIn={<HiOutlineArrowLongUp className="text-green-600" size={20} /> }
-          IconOut={<HiOutlineArrowLongDown className="text-red-600" size={20} />}
-        />
+      <aside className="">
+        SidebarComponent
+      </aside>
 
-        <PanelStatCompoment IconTitle={<IoBusOutline size={75}/>} title="passagers"
-          count_glo={23445} count_in={23} label_in="Aller"
-          count_out={44} label_out="Retour" 
-          IconIn={<HiOutlineArrowLongUp className="text-green-600" size={20} /> }
-          IconOut={<HiOutlineArrowLongDown className="text-red-600" size={20} />}
-        />
+      <section>
+        <div className="flex bg-red-500">
+          <PanelStatCompoment IconTitle={<IoTrainOutline size={75}/>} title="passagers"
+            count_glo={23445} count_in={23} label_in="Aller"
+            count_out={44} label_out="Retour" 
+            IconIn={<HiOutlineArrowLongUp className="text-green-600" size={20} /> }
+            IconOut={<HiOutlineArrowLongDown className="text-red-600" size={20} />}
+          />
 
-        <PanelStatCompoment IconTitle={<PiRoadHorizon size={75}/>} title="passagers"
-          count_glo={23445} count_in={23} label_in="Entrant"
-          count_out={44} label_out="Sortant" 
-          IconIn={<HiOutlineArrowLongUp className="text-green-600" size={20} /> }
-          IconOut={<HiOutlineArrowLongDown className="text-red-600" size={20} />}
-        />
-      </div>
+          <PanelStatCompoment IconTitle={<IoBusOutline size={75}/>} title="passagers"
+            count_glo={23445} count_in={23} label_in="Aller"
+            count_out={44} label_out="Retour" 
+            IconIn={<HiOutlineArrowLongUp className="text-green-600" size={20} /> }
+            IconOut={<HiOutlineArrowLongDown className="text-red-600" size={20} />}
+          />
+
+          <PanelStatCompoment IconTitle={<PiRoadHorizon size={75}/>} title="passagers"
+            count_glo={23445} count_in={23} label_in="Entrant"
+            count_out={44} label_out="Sortant" 
+            IconIn={<HiOutlineArrowLongUp className="text-green-600" size={20} /> }
+            IconOut={<HiOutlineArrowLongDown className="text-red-600" size={20} />}
+          />
+        </div>
 
 
-      <LineChart />
-      <LineDashedChart/>
-      <ColumnBasicChart/>
-      <ColumnStrackedChart/>
+        <div className="flex flex-wrap bg-cyan-300">
+          <LineChart />
+          <LineDashedChart/>
+          <ColumnBasicChart/>
+          <ColumnStrackedChart/>
+        </div>
+      </section>
 
     </main>
   )
