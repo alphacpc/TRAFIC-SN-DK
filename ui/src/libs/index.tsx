@@ -1,7 +1,7 @@
 import { ApexOptions } from "apexcharts";
 
 
-const LINE_WITH_LABELS = {
+export const LINE_WITH_LABELS = {
   series: [
     {
       name: "High - 2013",
@@ -76,7 +76,7 @@ const LINE_WITH_LABELS = {
 }
 
 
-const LINE_DASHED = {
+export const LINE_DASHED = {
   series: [{
     name: "Session Duration",
     data: [45, 52, 38, 24, 33, 26, 21, 20, 6, 8, 15, 10]
@@ -158,7 +158,7 @@ options: {
 }
 
 
-const COLUMN_BASIC = {
+export const COLUMN_BASIC = {
   series: [{
     name: 'Net Profit',
     data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
@@ -211,7 +211,7 @@ const COLUMN_BASIC = {
 }
 
 
-const COLUMN_STACKED = {
+export const COLUMN_STACKED = {
   series: [{
     name: 'PRODUCT A',
     data: [44, 55, 41, 67, 22, 43]
