@@ -24,22 +24,24 @@ const PanelStatCompoment : FC<PanelStatComponentProps> = (
                         <div className="div-panel-stat-trafic w-[14vw] border-2 border-bla rounded-md shadow-lg p-4 
                                 flex flex-col items-center justify-center">
                                 
-                                <IoTrainOutline size={75}/>
+                                {/* <IoTrainOutline size={75}/> */}
+                                {IconTitle}
                                 
-                                <p>passagers</p>
-
-                                <p className="text-4xl my-4">23 445</p>
+                                <p className="text-4xl mt-4">{count_glo}</p>
+                                <p>{title}</p>
                                 
                                 <div className="flex items-center">
                                 
                                 <div className="p-2 flex items-center">
-                                        <HiOutlineArrowLongDown className="text-red-600" size={20} />
-                                        <span className="font-bold">23 Aller</span>
+                                        {/* <HiOutlineArrowLongUp className="text-green-600" size={20} /> */}
+                                        {IconIn}
+                                        <span className="font-bold">{`${count_in} ${label_in}`}</span>
                                 </div>
 
                                 <div className="p-2 flex items-center">
-                                        <HiOutlineArrowLongUp className="text-green-600" size={20} />
-                                        <span className="font-bold">44 Retour</span>
+                                        {/* <HiOutlineArrowLongDown className="text-red-600" size={20} /> */}
+                                        {IconOut}
+                                        <span className="font-bold">{`${count_out} ${label_out}`}</span>
                                 </div>
 
                                 </div>

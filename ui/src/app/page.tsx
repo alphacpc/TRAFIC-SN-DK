@@ -6,6 +6,7 @@ import LineDashedChart from '../components/charts/LineDashedChart';
 import ColumnBasicChart from '../components/charts/ColumnBasicChart';
 import ColumnStrackedChart from '../components/charts/ColumnStackedChart';
 import LineChart from '../components/charts/LineChart';
+import PanelStatCompoment from '@/components/PanelStatCompoment';
 
 
 
@@ -14,26 +15,27 @@ export default function Home() {
     <main className="fle min-h-screen flex-col items-center justify-between bg-lime-100">
       
       <div className="flex bg-red-500">
-      <div className="div-panel-stat-trafic w-[14vw] border-2 border-bla rounded-md shadow-lg p-4 flex flex-col items-center justify-center">
-        <IoTrainOutline size={75}/>
-        
-        <p>passagers</p>
-        <p className="text-4xl my-4">23 445</p>
-        
-        <div className="flex items-center">
-          
-          <div className="p-2 flex items-center">
-            <HiOutlineArrowLongDown className="text-red-600" size={20} />
-            <span className="font-bold">23 Aller</span>
-          </div>
 
-          <div className="p-2 flex items-center">
-            <HiOutlineArrowLongUp className="text-green-600" size={20} />
-            <span className="font-bold">44 Retour</span>
-          </div>
+      <PanelStatCompoment IconTitle={<IoTrainOutline size={75}/>} title="passagers"
+        count_glo={23445} count_in={23} label_in="Aller"
+        count_out={44} label_out="Sortant" 
+        IconIn={<HiOutlineArrowLongUp className="text-green-600" size={20} /> }
+        IconOut={<HiOutlineArrowLongDown className="text-red-600" size={20} />}
+      />
 
-        </div>
-      </div>
+      <PanelStatCompoment IconTitle={<IoTrainOutline size={75}/>} title="passagers"
+        count_glo={23445} count_in={23} label_in="Aller"
+        count_out={44} label_out="Sortant" 
+        IconIn={<HiOutlineArrowLongUp className="text-green-600" size={20} /> }
+        IconOut={<HiOutlineArrowLongDown className="text-red-600" size={20} />}
+      />
+
+      <PanelStatCompoment IconTitle={<IoTrainOutline size={75}/>} title="passagers"
+        count_glo={23445} count_in={23} label_in="Aller"
+        count_out={44} label_out="Sortant" 
+        IconIn={<HiOutlineArrowLongUp className="text-green-600" size={20} /> }
+        IconOut={<HiOutlineArrowLongDown className="text-red-600" size={20} />}
+      />
 
       <div className="div-panel-stat-trafic w-[14vw] mx-10 border-2 border-bla rounded-md shadow-lg p-4 flex flex-col items-center justify-center">
         <IoBusOutline size={75}/>
