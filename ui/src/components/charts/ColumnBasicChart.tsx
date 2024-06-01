@@ -19,7 +19,7 @@ const ColumnBasicChart: React.FC = () => {
       <ApexChart
         options={COLUMN_BASIC.options}
         series={COLUMN_BASIC.series}
-        width={600}
+        width={800}
         type="bar"
       />
     </div>

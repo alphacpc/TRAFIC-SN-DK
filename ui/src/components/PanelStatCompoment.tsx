@@ -1,6 +1,5 @@
 import {FC, ReactNode} from 'react';
 import { HiOutlineArrowLongDown, HiOutlineArrowLongUp } from 'react-icons/hi2';
-import { IoTrainOutline } from 'react-icons/io5';
 
 type PanelStatComponentProps = {
         title: string;

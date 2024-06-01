@@ -20,9 +20,7 @@ const LineChart: React.FC = () => {
       <ApexChart
         options={LINE_WITH_LABELS.options}
         series={LINE_WITH_LABELS.series}
-        type="line"
-        // height={350}
-        width={600}
+        type="line" width={800}
       />
     </div>
   );

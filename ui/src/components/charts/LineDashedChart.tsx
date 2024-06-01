@@ -20,7 +20,7 @@ const LineDashedChart: React.FC = () => {
       <ApexChart
         options={LINE_DASHED.options}
         series={LINE_DASHED.series}
-        width={600}
+        width={800}
       />
     </div>
   );

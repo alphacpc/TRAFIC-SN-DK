@@ -20,7 +20,7 @@ const ColumnStrackedChart: React.FC = () => {
       <ApexChart
         options={COLUMN_STACKED.options}
         series={COLUMN_STACKED.series}
-        width={600}
+        width={800}
         type="bar"
       />
     </div>
