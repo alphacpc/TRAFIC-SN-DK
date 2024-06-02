@@ -1,13 +1,14 @@
-import SidebarComponent from '@/components/shared/SidebarComponent'
-import './globals.css'
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import "./globals.css";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import SidebarComponent from "@/components/shared/SidebarComponent";
+
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = { 
-  title: 'TRAFIC SENEGAL', 
-  description: 'Simulation du trafic du senegal en Next.js & Spring Boot'
+  title: "TRAFIC SENEGAL", 
+  description: "Simulation du trafic du senegal en Next.js & Spring Boot"
 }
 
 export default function RootLayout({

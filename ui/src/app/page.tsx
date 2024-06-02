@@ -1,11 +1,12 @@
-import { IoTrainOutline, IoBusOutline, IoBoatOutline } from "react-icons/io5";
+import React from "react";
+import LineChart from '@/components/charts/LineChart';
 import { PiRoadHorizon, PiAirplane } from "react-icons/pi";
+import PanelStatCompoment from '@/components/PanelStatCompoment';
 import LineDashedChart from '@/components/charts/LineDashedChart';
 import ColumnBasicChart from '@/components/charts/ColumnBasicChart';
 import ColumnStrackedChart from '@/components/charts/ColumnStackedChart';
-import LineChart from '@/components/charts/LineChart';
-import PanelStatCompoment from '@/components/PanelStatCompoment';
-import React from "react";
+import { IoTrainOutline, IoBusOutline, IoBoatOutline } from "react-icons/io5";
+
 
 
 export default function Home() {
@@ -45,7 +46,7 @@ export default function Home() {
           <ColumnBasicChart/>
           <ColumnStrackedChart/>
         </div>
-      </React.Fragment>
 
+      </React.Fragment>
   )
 }

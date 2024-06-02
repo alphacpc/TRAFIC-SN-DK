@@ -1,5 +1,5 @@
-import {FC, ReactNode} from 'react';
-import { HiOutlineArrowLongDown, HiOutlineArrowLongUp } from 'react-icons/hi2';
+import {FC, ReactNode} from "react";
+import { HiOutlineArrowLongDown, HiOutlineArrowLongUp } from "react-icons/hi2";
 
 type PanelStatComponentProps = {
         title: string;

@@ -1,7 +1,7 @@
-import Link from 'next/link'
-import React from 'react'
-import { IoHomeOutline } from 'react-icons/io5'
-import { PiUser } from 'react-icons/pi'
+import React from "react";
+import Link from "next/link";
+import { PiUser } from "react-icons/pi";
+import { IoHomeOutline } from "react-icons/io5";
 
 const tab = ["Tableau de bord", "Trafic TER", "Trafic BRT", "Trafic Peage", "Trafic AIDB", "Port Autonome", 
   "Alerting", "Parametres", "Gestion des utilisateurs"]
@@ -46,4 +46,4 @@ const SidebarComponent = () => {
   )
 }
 
-export default SidebarComponent
+export default SidebarComponent;
