@@ -18,29 +18,29 @@ export default function Home() {
 
       <section className="p-2 bg-slate-200">
         <div className="flex flex-wrap justify-around pb-4">
-          <PanelStatCompoment IconTitle={<IoTrainOutline size={75}/>} title="passagers"
+          <PanelStatCompoment IconTitle={<IoTrainOutline className="text-green-800" size={75}/>} title="passagers"
             count_glo={23445} count_in={23} label_in="Aller"
             count_out={44} label_out="Retour" 
           />
 
-          <PanelStatCompoment IconTitle={<IoBusOutline size={75}/>} title="passagers"
+          <PanelStatCompoment IconTitle={<IoBusOutline className="text-green-800" size={75}/>} title="passagers"
             count_glo={23445} count_in={23} label_in="Aller"
             count_out={44} label_out="Retour" 
           />
 
-          <PanelStatCompoment IconTitle={<PiRoadHorizon size={75}/>} title="passagers"
+          <PanelStatCompoment IconTitle={<PiRoadHorizon className="text-green-800" size={75}/>} title="passagers"
             count_glo={23445} count_in={23} label_in="Entrant"
             count_out={44} label_out="Sortant" 
           />
 
-          <PanelStatCompoment IconTitle={<PiAirplane size={75}/>} title="passagers"
-            count_glo={23445} count_in={23} label_in="Entrant"
-            count_out={44} label_out="Sortant" 
+          <PanelStatCompoment IconTitle={<PiAirplane className="text-green-800" size={75}/>} title="passagers"
+            count_glo={23445} count_in={23} label_in="Arrivé"
+            count_out={44} label_out="Départ" 
           />
 
-          <PanelStatCompoment IconTitle={<IoBoatOutline size={75}/>} title="passagers"
-            count_glo={23445} count_in={23} label_in="Entrant"
-            count_out={44} label_out="Sortant" 
+          <PanelStatCompoment IconTitle={<IoBoatOutline className="text-green-800" size={75}/>} title="contenaires"
+            count_glo={23445} count_in={23} label_in="Quaie"
+            count_out={44} label_out="Départ" 
           />
         </div>
 

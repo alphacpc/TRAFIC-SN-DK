@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-import { IoHomeOutline, IoHomeSharp } from 'react-icons/io5'
+import { IoHomeOutline } from 'react-icons/io5'
 import { PiUser } from 'react-icons/pi'
 
 const tab = ["Tableau de bord", "Trafic TER", "Trafic BRT", "Trafic Peage", "Trafic AIDB", "Port Autonome", 
@@ -9,6 +9,7 @@ const tab = ["Tableau de bord", "Trafic TER", "Trafic BRT", "Trafic Peage", "Tra
 const SidebarComponent = () => {
   return (
     <div className="bg-green-60 w-full h-[100vh] flex flex-col items-center relative">
+
 
       <div className="w-full flex flex-col items-center my-8 pb-4 border-b-4 border-slate-200">
         <PiUser size={100} className="p-2 rounded-full bg-gradient-to-tl from-green-600 to-sky-600 shadow-xl text-white"/>
@@ -26,6 +27,7 @@ const SidebarComponent = () => {
             </Link>
           </li>)}
         </ul>
+
 
         <div className="w-full flex">
           <Link className="bg-red-600 text-center cursor-pointer text-white p-2 rounded-sm w-full" href="/">deconnexion</Link>

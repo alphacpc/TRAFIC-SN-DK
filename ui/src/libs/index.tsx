@@ -54,9 +54,6 @@ export const LINE_WITH_LABELS = {
     },
     xaxis: {
       categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
-      title: {
-        text: 'Month'
-      }
     },
     yaxis: {
       title: {
@@ -66,11 +63,8 @@ export const LINE_WITH_LABELS = {
       max: 40
     },
     legend: {
-      position: 'top',
-      horizontalAlign: 'right',
-      floating: true,
-      offsetY: -25,
-      offsetX: -5
+      position: 'bottom',
+      offsetY: 5,
     }
   } as ApexOptions,
 }
@@ -271,8 +265,8 @@ export const COLUMN_STACKED = {
       ],
     },
     legend: {
-      position: 'right',
-      offsetY: 40
+      position: 'bottom',
+      offsetY: 10
     },
     fill: {
       opacity: 1
