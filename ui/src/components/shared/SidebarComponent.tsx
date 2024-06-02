@@ -14,7 +14,7 @@ const SidebarComponent = () => {
       <div className="w-full flex flex-col items-center my-8 pb-4 border-b-4 border-slate-200">
         <PiUser size={100} className="p-2 rounded-full bg-gradient-to-tl from-green-600 to-sky-600 shadow-xl text-white"/>
         <h2 className="font-bold text-lg my-2">Alpha amadou DIALLO</h2>
-        <h4 className="italic text-sm">Administrateur</h4>
+        <h4 className="italic text-basic text-orange-600 font-bold">Administrateur</h4>
       </div>
       
       
