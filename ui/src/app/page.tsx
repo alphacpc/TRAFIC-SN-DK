@@ -5,18 +5,12 @@ import ColumnBasicChart from '@/components/charts/ColumnBasicChart';
 import ColumnStrackedChart from '@/components/charts/ColumnStackedChart';
 import LineChart from '@/components/charts/LineChart';
 import PanelStatCompoment from '@/components/PanelStatCompoment';
-import SidebarComponent from "@/components/shared/SidebarComponent";
+import React from "react";
 
 
 export default function Home() {
   return (
-    <main className="flex flex-row min-h-screen bg-slate-200">
-      
-      <aside className="flex w-[30rem] h-[100vh] scroll-m-0 bg-white">
-        <SidebarComponent/>
-      </aside>
-
-      <section className="p-2 bg-slate-200">
+      <React.Fragment>
         <div className="flex flex-wrap justify-around pb-4">
           <PanelStatCompoment IconTitle={<IoTrainOutline className="text-green-800" size={75}/>} title="passagers"
             count_glo={23445} count_in={23} label_in="Aller"
@@ -51,8 +45,7 @@ export default function Home() {
           <ColumnBasicChart/>
           <ColumnStrackedChart/>
         </div>
-      </section>
+      </React.Fragment>
 
-    </main>
   )
 }

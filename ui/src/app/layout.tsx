@@ -1,3 +1,4 @@
+import SidebarComponent from '@/components/shared/SidebarComponent'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -16,7 +17,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <main className="flex flex-row min-h-screen bg-slate-200">
+        
+          <aside className="flex w-[30rem] h-[100vh] scroll-m-0 bg-white">
+            <SidebarComponent/>
+          </aside>
+
+          <section className="p-2">
+            {children}
+          </section>
+            
+        </main>
+      </body>
     </html>
   )
 }
