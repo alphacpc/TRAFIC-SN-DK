@@ -5,14 +5,15 @@ import ColumnBasicChart from '@/components/charts/ColumnBasicChart';
 import ColumnStrackedChart from '@/components/charts/ColumnStackedChart';
 import LineChart from '@/components/charts/LineChart';
 import PanelStatCompoment from '@/components/PanelStatCompoment';
+import SidebarComponent from "@/components/shared/SidebarComponent";
 
 
 export default function Home() {
   return (
     <main className="flex flex-row min-h-screen bg-lime-100">
       
-      <aside className="flex w-[25rem] bg-white">
-        SidebarComponent
+      <aside className="flex w-[30rem] bg-white">
+        <SidebarComponent/>
       </aside>
 
       <section className="p-2 bg-slate-200">
