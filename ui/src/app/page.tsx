@@ -10,9 +10,9 @@ import SidebarComponent from "@/components/shared/SidebarComponent";
 
 export default function Home() {
   return (
-    <main className="flex flex-row min-h-screen bg-lime-100">
+    <main className="flex flex-row min-h-screen bg-slate-200">
       
-      <aside className="flex w-[30rem] bg-white">
+      <aside className="flex w-[30rem] h-[100vh] scroll-m-0 bg-white">
         <SidebarComponent/>
       </aside>
 
